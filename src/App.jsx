@@ -1,8 +1,10 @@
 import SearchBar from "./componoents/SearchBar";
+import apiRequest from "./componoents/api";
 
 function App() {
-  const handleSubmit = (term) => {
-    console.log("Search Images for", term);
+  const handleSubmit = async (term) => {
+    const result = await apiRequest(term);
+    console.log(result);
   };
 
   return (
