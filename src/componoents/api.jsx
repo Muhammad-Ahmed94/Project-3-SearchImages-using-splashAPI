@@ -9,8 +9,9 @@ const apiRequest = async () => {
       query: "cars",
     },
   });
+
   console.log(response);
-  return response;
+  return response.data.results;
 };
 
 export default apiRequest;

@@ -1,7 +1,15 @@
-import apiRequest from "./componoents/api";
-apiRequest();
+import SearchBar from "./componoents/SearchBar";
+
 function App() {
-  return <div>Hello!</div>;
+  const handleSubmit = (term) => {
+    console.log("Search Images for", term);
+  };
+
+  return (
+    <div>
+      <SearchBar onSubmit={handleSubmit} />
+    </div>
+  );
 }
 
 export default App;
